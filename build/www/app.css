@@ -161,18 +161,24 @@ body {
 @media screen and (max-width: 975px) {
   nav.nav {
     background-color: #272A2D !important; }
+  .hero {
+    margin-top: 50px; }
   .about-us-content {
     flex-direction: column !important; }
     .about-us-content .half {
       width: 100% !important;
       padding: 10px 0; }
-  .services .level {
-    flex-direction: column !important; }
-    .services .level .level-item {
-      max-width: 100% !important;
-      padding: 20px 0; }
+  .services .content {
+    padding: 25px 0; }
+    .services .content .level {
+      flex-direction: column !important; }
+      .services .content .level .level-item {
+        max-width: 100% !important;
+        padding: 20px 0; }
   .contact-us {
     padding: 0 25px; }
+    .contact-us .content {
+      padding: 25px 0; }
   footer .container {
     flex-direction: column;
     justify-content: center;
