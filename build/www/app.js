@@ -1,4 +1,16 @@
 "use strict";
+$(document).ready(function () {
+    var main = $('#startchange').offset().top;
+    $(window).on('scroll', function () {
+        var stop = Math.round($(window).scrollTop());
+        if (stop > main) {
+            $('header .nav').addClass('past-main');
+        }
+        else {
+            $('header .nav').removeClass('past-main');
+        }
+    });
+});
 $('.nav-toggle').click(() => {
     $('.nav-toggle').toggleClass('is-active');
     $('.nav-menu').toggleClass('is-active');

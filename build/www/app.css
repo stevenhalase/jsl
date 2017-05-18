@@ -10,21 +10,21 @@ body {
   body .input:focus {
     border-color: #272A2D !important; }
   body header nav {
-    background-color: #272A2D !important; }
+    background-color: transparent !important;
+    transition: background-color .2s ease-in-out;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw; }
     body header nav .nav-left .icon {
       margin-right: 10px; }
     body header nav .nav-item {
       color: #FFF; }
       body header nav .nav-item:hover {
         color: #DDD; }
-    body header nav .nav-toggle span {
-      background-color: #FFF !important; }
-    body header nav .nav-toggle:hover {
-      background-color: #272A2D !important; }
-    body header nav .nav-toggle.is-active {
-      background-color: #FFF; }
-    body header nav .nav-menu.is-active .nav-item {
-      color: #272A2D; }
+  body header nav.past-main {
+    background-color: #272A2D !important;
+    transition: background-color .2s ease-in-out; }
   body .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("./assets/xx.jpg");
     background-size: cover;
@@ -148,7 +148,19 @@ body {
       body footer nav .nav-center {
         pointer-events: none; }
 
+@media screen and (max-width: 768px) {
+  .nav-toggle span {
+    background-color: #FFF !important; }
+  .nav-toggle:hover {
+    background-color: #272A2D !important; }
+  .nav-toggle.is-active {
+    background-color: #272A2D; }
+  .nav-menu.is-active .nav-item {
+    color: #272A2D; } }
+
 @media screen and (max-width: 975px) {
+  nav.nav {
+    background-color: #272A2D !important; }
   .about-us-content {
     flex-direction: column !important; }
     .about-us-content .half {
