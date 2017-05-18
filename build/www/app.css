@@ -6,6 +6,9 @@ body {
   background-attachment: fixed;
   width: 100vw;
   font-family: 'Open Sans', sans-serif; }
+  body .input:active,
+  body .input:focus {
+    border-color: #272A2D !important; }
   body header nav {
     background-color: #272A2D !important; }
     body header nav .nav-left .icon {
