@@ -1,0 +1,25 @@
+{
+  "name": "jsl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.release.json",
+    "watch": "tsc -w -p tsconfig.release.json",
+    "build-css": "node-sass src/www -o build/www",
+    "watch-css": "node-sass -w src/www -o build/www",
+    "build-html": "cpx \"src/www/**/*.{html,png,jpg}\" build/www",
+    "watch-html": "cpx \"src/www/**/*.{html,png,jpg}\" build/www --watch",
+    "watch-all": "concurrently \"npm run watch\" \"npm run watch-css\" \"npm run watch-html\"",
+    "start": "node ./build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "~4.0.33",
+    "@types/node": "~6.0.73",
+    "cpx": "^1.5.0",
+    "express": "^4.15.3",
+    "typescript": "~2.3.2"
+  }
+}
